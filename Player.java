@@ -1,4 +1,4 @@
-=/*
+/*
  * Activity 2.2.2
  * 
  * A Player class the PhraseSolverGame
@@ -10,6 +10,7 @@ public class Player
   /* your code here - attributes */
   private String name;
   private int points;
+
   /* your code here - constructor(s) 
   prompt the user to input the player’s name;
   
@@ -19,24 +20,31 @@ public class Player
 
   print a message welcoming the player, by name, to the game.*/ 
   public Player(){
-  
-  Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
 
-  System.out.println("Enter Your Name");
-  name = sc.nextLine();
-  points = 0;
-  System.out.print("Welcome "+ name);
-
+    System.out.println("Enter Your Name");
+    name = sc.nextLine();
+    points = 0;
+    System.out.print("Welcome " + name);
   }
 
   public Player(String inputName){
-  
-  name = inputName;
-  points = 0;
-  System.out.print("Welcome "+ name);
-
+    name = inputName;
+    points = 0;
+    System.out.print("Welcome " + name);
   }
+
   /* your code here - accessor(s) */ 
+  public String getName() {
+    return name;
+  }
+
+  public int getPoints() {
+    return points;
+  }
 
   /* your code here - mutator(s) */ 
+  public void setPoints(int p) {
+    points = p;
+  }
 }
